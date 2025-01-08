@@ -353,7 +353,7 @@ def show_help(message):
 🤖 /admincmd : Shows All Admin Commands.
 
 Buy From :- @GTX_GHOST
-Official Channel :- https://t.me/+kRKyJDJYT_djZjZl
+Official Channel :- https://t.me/GHOSTCHEATOP
 '''
     for handler in bot.message_handlers:
         if hasattr(handler, 'commands'):
@@ -368,7 +368,7 @@ Official Channel :- https://t.me/+kRKyJDJYT_djZjZl
 @bot.message_handler(commands=['start'])
 def welcome_start(message):
     user_name = message.from_user.first_name
-    response = f'''🔥SOMS ke LODE pe aapka swagat hai, {user_name}! Sabse acche se bgmi ki maa behen yahi hack karta hai. Kharidne ke liye Kira se sampark karein.
+    response = f'''🔥GHOST ke DDOS pe aapka swagat hai, {user_name}! Sabse acche se bgmi ki maa behen yahi hack karta hai. Kharidne ke liye Kira se sampark karein.
 🤗Try To Run This Command : /help 
 💵BUY :-@GTX_GHOST'''
     bot.reply_to(message, response)
@@ -380,7 +380,7 @@ def welcome_rules(message):
 
 1. Dont Run Too Many Attacks !! Cause A Ban From Bot
 2. Dont Run 2 Attacks At Same Time Becz If U Then U Got Banned From Bot.
-3. MAKE SURE YOU JOINED https://t.me/+kRKyJDJYT_djZjZl OTHERWISE NOT WORK
+3. MAKE SURE YOU JOINED https://t.me/GHOSTCHEATOP OTHERWISE NOT WORK
 4. We Daily Checks The Logs So Follow these rules to avoid Ban!!'''
     bot.reply_to(message, response)
 
