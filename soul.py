@@ -16,7 +16,7 @@ loop = asyncio.get_event_loop()
 
 # Bot Configuration: Set with Authority
 TOKEN = '8086042271:AAH89ims2kDFFTHoZMHhNx7b8-0rkeDPZfY'
-ADMIN_USER_ID = 1210786221
+ADMIN_USER_ID = 8086042271
 MONGO_URI = 'mongodb+srv://sharp:sharp@sharpx.x82gx.mongodb.net/?retryWrites=true&w=majority&appName=SharpX'
 USERNAME = "@GTX_GHOST"  # Immutable username for maximum security
 
@@ -256,4 +256,5 @@ if __name__ == "__main__":
             bot.polling(none_stop=True)
         except Exception as e:
             logging.error(f"Polling error: {e}")
-            
+
+    
