@@ -5,10 +5,10 @@ import os
 from keep_alive import keep_alive
 keep_alive()
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('8004531749:AAE1b_YeYV8IeNmFxXXyjLwTRt_la7jow8o')
+bot = telebot.TeleBot('7730439450:AAEmmtfG59WL4Sbr4ERy8iHYkZjxY8B2CRs')
 
 # Admin user IDs
-admin_id = {"6925561335"}
+admin_id = {"7083378335"}
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -148,7 +148,7 @@ def add_user(message):
         else:
             response = "Please specify a user ID and the duration (e.g., 1hour, 2days, 3weeks, 4months) to add ."
     else:
-        response = "Mood ni hai abhi pelhe purchase kar isse:- @LANKAxARINDAM."
+        response = "Mood ni hai abhi pelhe purchase kar isse:- @TREXVIVEK."
 
     bot.reply_to(message , response)
 
@@ -184,7 +184,7 @@ def remove_user(message):
             response = '''Please Specify A User ID to Remove. 
  Usage: /remove <userid>'''
     else:
-        response = "Purchase karle bsdk:- @LANKAxARINDAM ."
+        response = "Purchase karle bsdk:- @TREXVIVEK ."
 
     bot.reply_to(message, response)
     
@@ -352,8 +352,8 @@ def show_help(message):
 👀 To See Admin Commands:
 🤖 /admincmd : Shows All Admin Commands.
 
-Buy From :- @LANKAxARINDAM
-Official Channel :- https://t.me/pvtddosshinchan
+Buy From :- @TREXVIVEK
+Official Channel :- https://t.me/+HEyXXgA_1hU4NmZl
 '''
     for handler in bot.message_handlers:
         if hasattr(handler, 'commands'):
@@ -368,9 +368,9 @@ Official Channel :- https://t.me/pvtddosshinchan
 @bot.message_handler(commands=['start'])
 def welcome_start(message):
     user_name = message.from_user.first_name
-    response = f'''🔥SHINCHAN ke LODE pe aapka swagat hai, {user_name}! Sabse acche se bgmi ki maa behen yahi hack karta hai. Kharidne ke liye Kira se sampark karein.
+    response = f'''🔥VIVEK ke LODE pe aapka swagat hai, {user_name}! Sabse acche se bgmi ki maa behen yahi hack karta hai. Kharidne ke liye Kira se sampark karein.
 🤗Try To Run This Command : /help 
-💵BUY :-@LANKAxARINDAM'''
+💵BUY :-@TREXVIVEK'''
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['rules'])
@@ -380,7 +380,7 @@ def welcome_rules(message):
 
 1. Dont Run Too Many Attacks !! Cause A Ban From Bot
 2. Dont Run 2 Attacks At Same Time Becz If U Then U Got Banned From Bot.
-3. MAKE SURE YOU JOINED https://t.me/pvtddosshinchan OTHERWISE NOT WORK
+3. MAKE SURE YOU JOINED https://t.me/+HEyXXgA_1hU4NmZl OTHERWISE NOT WORK
 4. We Daily Checks The Logs So Follow these rules to avoid Ban!!'''
     bot.reply_to(message, response)
 
