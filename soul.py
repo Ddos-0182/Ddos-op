@@ -8,7 +8,7 @@ keep_alive()
 bot = telebot.TeleBot('7579932366:AAGQ-lw3ML7MlIeNckX-aOcxp0XT8_yXK8w')
 
 # Admin user IDs
-admin_id = {"7083378335"}
+admin_id = {"6925561335"}
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -148,7 +148,7 @@ def add_user(message):
         else:
             response = "Please specify a user ID and the duration (e.g., 1hour, 2days, 3weeks, 4months) to add ."
     else:
-        response = "Mood ni hai abhi pelhe purchase kar isse:- @TREXVIVEK."
+        response = "Mood ni hai abhi pelhe purchase kar isse:- @LANKAxARINDAM."
 
     bot.reply_to(message , response)
 
@@ -184,7 +184,7 @@ def remove_user(message):
             response = '''Please Specify A User ID to Remove. 
  Usage: /remove <userid>'''
     else:
-        response = "Purchase karle bsdk:- @TREXVIVEK ."
+        response = "Purchase karle bsdk:- @LANKAxARINDAM ."
 
     bot.reply_to(message, response)
     
@@ -312,7 +312,9 @@ def handle_attack(message):
         else:
             response = "Usage: /chodo <target> <port> <time>"
     else:
-        response = "Nhi milega GROUP per Free hai Wha use krle."
+        response = "ACCESS TOH LELE LAURE 
+FREE mai kuch nahi milega
+FREE mai shrif mere LUND milega.... lega toh bata !!."
 
     bot.reply_to(message, response)
 
@@ -352,8 +354,8 @@ def show_help(message):
 👀 To See Admin Commands:
 🤖 /admincmd : Shows All Admin Commands.
 
-Buy From :- @TREXVIVEK
-Official Channel :- https://t.me/+HEyXXgA_1hU4NmZl
+Buy From :- @LANKAxARINDAM
+Official Channel :- https://t.me/+kn3dJ7WVEctkMjBl
 '''
     for handler in bot.message_handlers:
         if hasattr(handler, 'commands'):
@@ -370,7 +372,7 @@ def welcome_start(message):
     user_name = message.from_user.first_name
     response = f'''🔥VIVEK ke LODE pe aapka swagat hai, {user_name}! Sabse acche se bgmi ki maa behen yahi hack karta hai. Kharidne ke liye Kira se sampark karein.
 🤗Try To Run This Command : /help 
-💵BUY :-@TREXVIVEK'''
+💵BUY :-@LANKAxARINDAM'''
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['rules'])
@@ -380,7 +382,7 @@ def welcome_rules(message):
 
 1. Dont Run Too Many Attacks !! Cause A Ban From Bot
 2. Dont Run 2 Attacks At Same Time Becz If U Then U Got Banned From Bot.
-3. MAKE SURE YOU JOINED https://t.me/+HEyXXgA_1hU4NmZl OTHERWISE NOT WORK
+3. MAKE SURE YOU JOINED https://t.me/+kn3dJ7WVEctkMjBl OTHERWISE NOT WORK
 4. We Daily Checks The Logs So Follow these rules to avoid Ban!!'''
     bot.reply_to(message, response)
 
