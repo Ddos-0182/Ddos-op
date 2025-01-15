@@ -312,9 +312,7 @@ def handle_attack(message):
         else:
             response = "Usage: /chodo <target> <port> <time>"
     else:
-        response = "ACCESS TOH LELE LAURE 
-FREE mai kuch nahi milega
-FREE mai shrif mere LUND milega.... lega toh bata !!."
+        response = "ACCESS TOH LELE LAURE FREE mai kuch nahi milega FREE mai shrif mere LUND milega lega toh bata ."
 
     bot.reply_to(message, response)
 
