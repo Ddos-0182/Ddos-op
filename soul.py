@@ -274,7 +274,7 @@ COOLDOWN_TIME =0
 attack_running = False
 
 # Handler for /attack command
-@bot.message_handler(commands=['chodo'])
+@bot.message_handler(commands=['manu'])
 def handle_attack(message):
     global attack_running
 
