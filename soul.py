@@ -368,7 +368,7 @@ Official Channel :- https://t.me/+HEyXXgA_1hU4NmZl
 @bot.message_handler(commands=['start'])
 def welcome_start(message):
     user_name = message.from_user.first_name
-    response = f'''MAGGI ke LODE pe aapka swagat hai, {user_name}! Sabse acche se bgmi ki maa behen yahi hack karta hai. Kharidne ke liye Kira se sampark karein.
+    response = f'''VIVEK ke LODE pe aapka swagat hai, {user_name}! Sabse acche se bgmi ki maa behen yahi hack karta hai. Kharidne ke liye Kira se sampark karein.
 🤗Try To Run This Command : /help 
 💵BUY :- @TREXVIVEK'''
     bot.reply_to(message, response)
