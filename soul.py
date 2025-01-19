@@ -5,10 +5,10 @@ import os
 from keep_alive import keep_alive
 keep_alive()
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('7730439450:AAEmmtfG59WL4Sbr4ERy8iHYkZjxY8B2CRs')
+bot = telebot.TeleBot('8086042271:AAH89ims2kDFFTHoZMHhNx7b8-0rkeDPZfY')
 
 # Admin user IDs
-admin_id = {"7083378335"}
+admin_id = {"1210786221"}
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -148,7 +148,7 @@ def add_user(message):
         else:
             response = "Please specify a user ID and the duration (e.g., 1hour, 2days, 3weeks, 4months) to add ."
     else:
-        response = "Mood ni hai abhi pelhe purchase kar isse:- @Tg_maggi."
+        response = "Mood ni hai abhi pelhe purchase kar isse:- @STARxGHOST."
 
     bot.reply_to(message , response)
 
@@ -184,7 +184,7 @@ def remove_user(message):
             response = '''Please Specify A User ID to Remove. 
  Usage: /remove <userid>'''
     else:
-        response = "Purchase karle bsdk:- @Tg_maggi ."
+        response = "Purchase karle bsdk:- @STARxGHOST ."
 
     bot.reply_to(message, response)
     
@@ -352,7 +352,7 @@ def show_help(message):
 👀 To See Admin Commands:
 🤖 /admincmd : Shows All Admin Commands.
 
-Buy From :- @Tg_maggi
+Buy From :- @STARxGHOST
 Official Channel :- https://t.me/niggacheatss
 '''
     for handler in bot.message_handlers:
@@ -370,7 +370,7 @@ def welcome_start(message):
     user_name = message.from_user.first_name
     response = f'''MAGGI ke LODE pe aapka swagat hai, {user_name}! Sabse acche se bgmi ki maa behen yahi hack karta hai. Kharidne ke liye Kira se sampark karein.
 🤗Try To Run This Command : /help 
-💵BUY :- @Tg_maggi'''
+💵BUY :- @STARxGHOST'''
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['rules'])
