@@ -5,7 +5,7 @@ import os
 from keep_alive import keep_alive
 keep_alive()
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('7730439450:AAEmmtfG59WL4Sbr4ERy8iHYkZjxY8B2CRs')
+bot = telebot.TeleBot('7942937704:AAFM6qI8dd74bEuSu-E0UUqN0N9FioD4qa8')
 
 # Admin user IDs
 admin_id = {"7083378335", "7702886430"}
@@ -148,7 +148,7 @@ def add_user(message):
         else:
             response = "Please specify a user ID and the duration (e.g., 1hour, 2days, 3weeks, 4months) to add ."
     else:
-        response = "Mood ni hai abhi pelhe purchase kar isse:- @Tg_maggi."
+        response = "Mood ni hai abhi pelhe purchase kar isse:- @TREXVIVEK."
 
     bot.reply_to(message , response)
 
@@ -184,7 +184,7 @@ def remove_user(message):
             response = '''Please Specify A User ID to Remove. 
  Usage: /remove <userid>'''
     else:
-        response = "Purchase karle bsdk:- @Tg_maggi ."
+        response = "Purchase karle bsdk:- @TREXVIVEK ."
 
     bot.reply_to(message, response)
     
@@ -352,8 +352,8 @@ def show_help(message):
 👀 To See Admin Commands:
 🤖 /admincmd : Shows All Admin Commands.
 
-Buy From :- @Tg_maggi
-Official Channel :- https://t.me/niggacheatss
+Buy From :- @TREXVIVEK
+Official Channel :- https://t.me/+HEyXXgA_1hU4NmZl
 '''
     for handler in bot.message_handlers:
         if hasattr(handler, 'commands'):
@@ -370,7 +370,7 @@ def welcome_start(message):
     user_name = message.from_user.first_name
     response = f'''SERVER ke LODE pe aapka swagat hai, {user_name}! Sabse acche se bgmi ki maa behen yahi hack karta hai. Kharidne ke liye Kira se sampark karein.
 🤗Try To Run This Command : /help 
-💵BUY :- @Tg_maggi'''
+💵BUY :- @TREXVIVEK'''
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['rules'])
@@ -380,7 +380,7 @@ def welcome_rules(message):
 
 1. Dont Run Too Many Attacks !! Cause A Ban From Bot
 2. Dont Run 2 Attacks At Same Time Becz If U Then U Got Banned From Bot.
-3. MAKE SURE YOU JOINED https://t.me/niggacheatss OTHERWISE NOT WORK
+3. MAKE SURE YOU JOINED https://t.me/+HEyXXgA_1hU4NmZl OTHERWISE NOT WORK
 4. We Daily Checks The Logs So Follow these rules to avoid Ban!!'''
     bot.reply_to(message, response)
 
