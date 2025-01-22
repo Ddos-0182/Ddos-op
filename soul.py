@@ -5,10 +5,10 @@ import os
 from keep_alive import keep_alive
 keep_alive()
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('7714340481:AAE6spxc4WxKgzfJQdMomryW1WGwcNw5WWA')
+bot = telebot.TeleBot('7780036933:AAEvRPOHOv7PvAOoI6rqZy6G9PIh8UN92us')
 
 # Admin user IDs
-admin_id = {"7083378335", "6217175067"}
+admin_id = {"7083378335", "7702886430"}
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -148,7 +148,7 @@ def add_user(message):
         else:
             response = "Please specify a user ID and the duration (e.g., 1hour, 2days, 3weeks, 4months) to add ."
     else:
-        response = "Mood ni hai abhi pelhe purchase kar isse:- @Bhawani0054."
+        response = "Mood ni hai abhi pelhe purchase kar isse:- @SomsPvtt."
 
     bot.reply_to(message , response)
 
@@ -184,7 +184,7 @@ def remove_user(message):
             response = '''Please Specify A User ID to Remove. 
  Usage: /remove <userid>'''
     else:
-        response = "Purchase karle bsdk:- @Bhawani0054 ."
+        response = "Purchase karle bsdk:- @SomsPvtt ."
 
     bot.reply_to(message, response)
     
@@ -352,7 +352,7 @@ def show_help(message):
 👀 To See Admin Commands:
 🤖 /admincmd : Shows All Admin Commands.
 
-Buy From :- @Bhawani0054
+Buy From :- @SomsPvtt
 Official Channel :- PVT H BTC
 '''
     for handler in bot.message_handlers:
@@ -370,7 +370,7 @@ def welcome_start(message):
     user_name = message.from_user.first_name
     response = f'''SERVER ke LODE pe aapka swagat hai, {user_name}! Sabse acche se bgmi ki maa behen yahi hack karta hai. Kharidne ke liye Kira se sampark karein.
 🤗Try To Run This Command : /help 
-💵BUY :- @Bhawani0054'''
+💵BUY :- @SomsPvtt'''
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['rules'])
