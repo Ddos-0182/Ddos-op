@@ -274,7 +274,7 @@ COOLDOWN_TIME =0
 attack_running = False
 
 # Handler for /attack command
-@bot.message_handler(commands=['chodo'])
+@bot.message_handler(commands=['bgmi'])
 def handle_attack(message):
     global attack_running
 
@@ -296,7 +296,7 @@ def handle_attack(message):
             else:
                 attack_running = True  # Set the attack state to running
                 try:
-                    record_command_logs(user_id, '/chodo', target, port, time)
+                    record_command_logs(user_id, '/bgmi', target, port, time)
                     log_command(user_id, target, port, time)
                     start_attack_reply(message, target, port, time)
 
@@ -310,7 +310,7 @@ def handle_attack(message):
                 finally:
                     attack_running = False  # Reset the attack state
         else:
-            response = "Usage: /chodo <target> <port> <time>"
+            response = "Usage: /bgmi <target> <port> <time>"
     else:
         response = "ACCESS TOH LELE LAURE FREE mai kuch nahi milega FREE mai shrif mere LUND milega lega toh bata ."
 
@@ -343,7 +343,7 @@ def show_command_logs(message):
 @bot.message_handler(commands=['help'])
 def show_help(message):
     help_text ='''
-💥 /chodo : 😫BGMI WALO KI MAA KO CHODO🥵. 
+💥 /bgmi : 😫BGMI WALO KI MAA KO CHODO🥵. 
 💥 /rules : 📒GWAR RULES PADHLE KAM AYEGA📒 !!.
 💥 /mylogs : 👁️SAB CHUDAI DEKHO👁️.
 💥 /plan : 💵SABKE BSS KA BAT HAI💵.
