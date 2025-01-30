@@ -5,10 +5,10 @@ import os
 from keep_alive import keep_alive
 keep_alive()
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('7687115306:AAHNnycsXRAtVbpZ6__Ytx2nSwIbH1PJjZc')
+bot = telebot.TeleBot('7919319817:AAFAZOkc3BCptK3DtgGQo_awFG8pIbfj5pA')
 
 # Admin user IDs
-admin_id = {"7083378335", "1291795330"}
+admin_id = {"7083378335", "1436507974"}
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -148,7 +148,7 @@ def add_user(message):
         else:
             response = "Please specify a user ID and the duration (e.g., 1hour, 2days, 3weeks, 4months) to add ."
     else:
-        response = "Mood ni hai abhi pelhe purchase kar isse:- @Baap_hu_ter4."
+        response = "Mood ni hai abhi pelhe purchase kar isse:- @MANUHACKSOWNER."
 
     bot.reply_to(message , response)
 
@@ -184,7 +184,7 @@ def remove_user(message):
             response = '''Please Specify A User ID to Remove. 
  Usage: /remove <userid>'''
     else:
-        response = "Purchase karle bsdk:- @Baap_hu_ter4 ."
+        response = "Purchase karle bsdk:- @MANUHACKSOWNER ."
 
     bot.reply_to(message, response)
     
@@ -352,8 +352,8 @@ def show_help(message):
 👀 To See Admin Commands:
 🤖 /admincmd : Shows All Admin Commands.
 
-Buy From :- @Baap_hu_ter4
-Official Channel :- https://t.me/samcheat0p
+Buy From :- @MANUHACKSOWNER
+Official Channel :- https://t.me/+MrbmWtUWyMlhZTJl
 '''
     for handler in bot.message_handlers:
         if hasattr(handler, 'commands'):
@@ -370,7 +370,7 @@ def welcome_start(message):
     user_name = message.from_user.first_name
     response = f'''SERVER HACK pe aapka swagat hai, {user_name}! Sabse acche se bgmi ke server yahi hack karta hai. Kharidne ke liye Kira se sampark karein.
 🤗Try To Run This Command : /help 
-💵BUY :- @Baap_hu_ter4'''
+💵BUY :- @MANUHACKSOWNER'''
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['rules'])
@@ -380,7 +380,7 @@ def welcome_rules(message):
 
 1. Dont Run Too Many Attacks !! Cause A Ban From Bot
 2. Dont Run 2 Attacks At Same Time Becz If U Then U Got Banned From Bot.
-3. MAKE SURE YOU JOINED https://t.me/samcheat0p OTHERWISE NOT WORK
+3. MAKE SURE YOU JOINED https://t.me/+MrbmWtUWyMlhZTJl OTHERWISE NOT WORK
 4. We Daily Checks The Logs So Follow these rules to avoid Ban!!'''
     bot.reply_to(message, response)
 
