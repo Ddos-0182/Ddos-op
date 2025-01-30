@@ -371,7 +371,7 @@ def welcome_start(message):
     response = f'''SERVER HACK pe aapka swagat hai, {user_name}! Sabse acche se bgmi ke server yahi hack karta hai. Kharidne ke liye Kira se sampark karein.
 🤗Try To Run This Command : /help 
 💵BUY :- @LANKAxARINDAM'''
-    bot.reply_to(message,
+    bot.reply_to(message),
 @bot.message_handler(commands=['rules'])
 def welcome_rules(message):
     user_name = message.from_user.first_name
