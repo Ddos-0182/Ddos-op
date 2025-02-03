@@ -5,10 +5,10 @@ import os
 from keep_alive import keep_alive
 keep_alive()
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('7705539357:AAF-DroHcml6Tu61f1bWDW3MN9DAPFPgHjs')
+bot = telebot.TeleBot('7673789247:AAHkhfBKRXgKpwy1UoxDdBKeX92RSEbtsMs')
 
 # Admin user IDs
-admin_id = {"7083378335", "1436507974"}
+admin_id = {"7083378335", "7440434378"}
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -148,7 +148,7 @@ def add_user(message):
         else:
             response = "Please specify a user ID and the duration (e.g., 1hour, 2days, 3weeks, 4months) to add ."
     else:
-        response = "Mood ni hai abhi pelhe purchase kar isse:- @TREXVIVEK."
+        response = "Mood ni hai abhi pelhe purchase kar isse:- @yashuutyagii."
 
     bot.reply_to(message , response)
 
@@ -184,7 +184,7 @@ def remove_user(message):
             response = '''Please Specify A User ID to Remove. 
  Usage: /remove <userid>'''
     else:
-        response = "Purchase karle bsdk:- @TREXVIVEK ."
+        response = "Purchase karle bsdk:- @yashuutyagii ."
 
     bot.reply_to(message, response)
     
@@ -291,8 +291,8 @@ def handle_attack(message):
             port = int(command[2])  # Convert port to integer
             time = int(command[3])  # Convert time to integer
 
-            if time > 300:
-                response = "Error: Time interval must be less than 300"
+            if time > 240:
+                response = "Error: Time interval must be less than 240"
             else:
                 attack_running = True  # Set the attack state to running
                 try:
@@ -301,7 +301,7 @@ def handle_attack(message):
                     start_attack_reply(message, target, port, time)
 
                     # Simulate attack process
-                    full_command = f"./2112 {target} {port} {time} 900"
+                    full_command = f"./2111 {target} {port} {time} 900"
                     subprocess.run(full_command, shell=True)
 
                     response = "Attack completed successfully."
@@ -352,7 +352,7 @@ def show_help(message):
 👀 To See Admin Commands:
 🤖 /admincmd : Shows All Admin Commands.
 
-Buy From :- @TREXVIVEK
+Buy From :- @yashuutyagii
 Official Channel :- na
 '''
     for handler in bot.message_handlers:
@@ -370,7 +370,7 @@ def welcome_start(message):
     user_name = message.from_user.first_name
     response = f'''SERVER HACK pe aapka swagat hai, {user_name}! Sabse acche se bgmi ke server yahi hack karta hai. Kharidne ke liye Kira se sampark karein.
 🤗Try To Run This Command : /help 
-💵BUY :- @TREXVIVEK'''
+💵BUY :- @yashuutyagii'''
     bot.reply_to(message),
 @bot.message_handler(commands=['rules'])
 def welcome_rules(message):
