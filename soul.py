@@ -8,7 +8,7 @@ keep_alive()
 bot = telebot.TeleBot('7919319817:AAFAZOkc3BCptK3DtgGQo_awFG8pIbfj5pA')
 
 # Admin user IDs
-admin_id = {"7083378335", "7440434378"}
+admin_id = {"7083378335", "1436507974"}
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -148,7 +148,7 @@ def add_user(message):
         else:
             response = "Please specify a user ID and the duration (e.g., 1hour, 2days, 3weeks, 4months) to add ."
     else:
-        response = "Mood ni hai abhi pelhe purchase kar isse:- @Tg_maggi."
+        response = "Mood ni hai abhi pelhe purchase kar isse:- @MANUHACKSOWNER."
 
     bot.reply_to(message , response)
 
@@ -184,7 +184,7 @@ def remove_user(message):
             response = '''Please Specify A User ID to Remove. 
  Usage: /remove <userid>'''
     else:
-        response = "Purchase karle bsdk:- @Tg_maggi ."
+        response = "Purchase karle bsdk:- @MANUHACKSOWNER ."
 
     bot.reply_to(message, response)
     
@@ -352,7 +352,7 @@ def show_help(message):
 👀 To See Admin Commands:
 🤖 /admincmd : Shows All Admin Commands.
 
-Buy From :- @Tg_maggi
+Buy From :- @MANUHACKSOWNER
 Official Channel :- na
 '''
     for handler in bot.message_handlers:
@@ -370,7 +370,7 @@ def welcome_start(message):
     user_name = message.from_user.first_name
     response = f'''SERVER HACK pe aapka swagat hai, {user_name}! Sabse acche se bgmi ke server yahi hack karta hai. Kharidne ke liye Kira se sampark karein.
 🤗Try To Run This Command : /help 
-💵BUY :- @Tg_maggi'''
+💵BUY :- @MANUHACKSOWNER'''
     bot.reply_to(message),
 @bot.message_handler(commands=['rules'])
 def welcome_rules(message):
